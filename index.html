@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-br" data-bs-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competências do curso: Domínio de Hamon e Stands | AVA - Fundação Speedwagon</title>
+    <!-- Bootstrap 5 & FontAwesome para reproduzir o tema Boost do Moodle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --jojo-purple: #4a148c;
+            --jojo-gold: #fbc02d;
+            --jojo-magenta: #ad1457;
+            --jojo-bg: #f6f3fa;
+        }
+        body {
+            background-color: var(--jojo-bg);
+            padding-top: 60px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .navbar {
+            border-bottom: 3px solid var(--jojo-gold);
+            box-shadow: 0 2px 8px rgba(74, 20, 140, 0.15);
+        }
+        .navbar-brand {
+            color: var(--jojo-purple) !important;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+        }
+        .sidebar-drawer {
+            width: 260px;
+            position: fixed;
+            top: 59px;
+            bottom: 0;
+            left: 0;
+            background: #fff;
+            border-right: 1px solid #dee2e6;
+            padding: 1rem;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .main-content {
+            margin-left: 260px;
+            padding: 2rem;
+        }
+        @media (max-width: 768px) {
+            .sidebar-drawer { display: none; }
+            .main-content { margin-left: 0; }
+        }
+        .competency-card {
+            border-left: 5px solid var(--jojo-purple);
+            transition: transform 0.15s ease;
+        }
+        .competency-card:hover {
+            transform: translateY(-2px);
+        }
+        .badge-joestar {
+            background-color: #f3e5f5;
+            color: var(--jojo-purple);
+            border: 1px solid #ce93d8;
+            font-family: monospace;
+        }
+        .btn-jojo {
+            background-color: var(--jojo-purple);
+            color: #fff;
+            border: 1px solid var(--jojo-gold);
+        }
+        .btn-jojo:hover {
+            background-color: #310d5e;
+            color: var(--jojo-gold);
+        }
+        .menacing-tag {
+            font-weight: 900;
+            color: var(--jojo-magenta);
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body id="page-admin-tool-lp-coursecompetencies" class="format-topics pagelayout-incourse">
+
+    <!-- Barra de Navegação Superior -->
+    <nav class="navbar fixed-top bg-white navbar-expand" aria-label="Navegação no site">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand d-flex align-items-center m-0 me-4 p-0">
+                <i class="fa-solid fa-star me-2" style="color: var(--jojo-magenta);"></i> AVA - Fundação Speedwagon
+            </a>
+
+            <div class="primary-navigation">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Página inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Painel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" style="color: var(--jojo-purple);" href="#">Meus cursos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Menu do Usuário / Notificações -->
+            <div id="usernavigation" class="navbar-nav ms-auto align-items-center gap-3">
+                <div class="position-relative" title="28 alertas de usuários de Stand inimigos">
+                    <i class="fa fa-bell text-secondary"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">
+                        28
+                    </span>
+                </div>
+                <div title="Comunicador da Fundação Speedwagon">
+                    <i class="fa fa-message text-secondary"></i>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="btn dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown">
+                        <span class="rounded-circle text-warning d-inline-flex justify-content-center align-items-center fw-bold" style="width: 35px; height: 35px; background-color: #212529; border: 2px solid var(--jojo-gold);">
+                            JK
+                        </span>
+                        <span class="d-none d-sm-inline small fw-semibold">Jotaro Kujo</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Perfil (Biólogo Marinho / Portador)</a></li>
+                        <li><a class="dropdown-item" href="#">Registro de Batalhas</a></li>
+                        <li><a class="dropdown-item" href="#">Rota para o Egito (50 Dias)</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Yare Yare Daze (Sair)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gaveta Lateral (Drawer) -->
+    <aside class="sidebar-drawer">
+        <h6 class="text-uppercase text-muted small fw-bold mb-3">Índice do Curso</h6>
+        <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-mask me-2 text-secondary"></i> Geral: A Máscara de Pedra
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-sun me-2 text-warning"></i> Módulo 1: Respiração Hamon
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-ghost me-2 text-primary"></i> Módulo 2: Manifestação de Stand
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-hurricane me-2 text-info"></i> Módulo 3: Técnica Spin & Flecha
+            </a>
+            <a href="#" class="list-group-item list-group-item-action active" style="background-color: var(--jojo-purple); border-color: var(--jojo-purple);">
+                <i class="fa-solid fa-award me-2 text-warning"></i> Competências do curso
+            </a>
+        </div>
+    </aside>
+
+    <!-- Conteúdo Principal (#maincontent) -->
+    <main id="maincontent" class="main-content">
+        <div class="container-fluid">
+            <!-- Cabeçalho do Curso -->
+            <div class="card shadow-sm mb-4 border-0">
+                <div class="card-body">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb small mb-2">
+                            <li class="breadcrumb-item"><a href="#">Meus cursos</a></li>
+                            <li class="breadcrumb-item"><a href="#">JOJO-303: Combate Bizarro e Energia Espiritual</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Competências</li>
+                        </ol>
+                    </nav>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                        <div>
+                            <div class="d-flex align-items-center gap-2">
+                                <h1 class="h3 mb-1 fw-bold" style="color: var(--jojo-purple);">Competências do curso</h1>
+                                <span class="menacing-tag small">ゴゴゴゴ</span>
+                            </div>
+                            <p class="text-muted mb-0">Estrutura de aprendizagem: <strong>Arquivo Confidencial da Fundação Speedwagon</strong></p>
+                        </div>
+                        <button class="btn btn-jojo" data-bs-toggle="modal" data-bs-target="#addCompetencyModal">
+                            <i class="fa-solid fa-plus me-1"></i> Adicionar competências ao curso
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra de Progresso Geral -->
+            <div class="card shadow-sm mb-4 border-0">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span class="fw-semibold">Progresso na Linhagem Joestar</span>
+                        <span class="fw-bold text-success">5 de 6 competências concluídas (83%)</span>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 83%; background-color: var(--jojo-purple);"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lista de Competências (Partes 1 a 6) -->
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                    <h2 class="h5 mb-0 fw-bold">Competências vinculadas a este curso</h2>
+                    <span class="badge bg-dark text-warning">6 competências</span>
+                </div>
+                <div class="card-body d-flex flex-column gap-3">
+
+                    <!-- Competência 1: Jonathan -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #1976d2;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-joestar mb-1">JOJO-PT1-01</span>
+                                    <h3 class="h6 fw-bold mb-1">Controle de Respiração Hamon (Jonathan Joestar)</h3>
+                                    <p class="small text-muted mb-2">Canalizar energia solar através do fluxo sanguíneo para neutralizar vampiros e criaturas da noite com honra de cavalheiro.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-fire text-warning me-1"></i> Prática: Overdrive Solar</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 2: Joseph -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #2e7d32;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-joestar mb-1">JOJO-PT2-02</span>
+                                    <h3 class="h6 fw-bold mb-1">Estratégia Imprevisível & Previsão (Joseph Joestar)</h3>
+                                    <p class="small text-muted mb-2">Antecipar a próxima frase do oponente, improvisar armadilhas com Clackers e dominar a técnica secreta da família Joestar (Nigerundayo).</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-chess text-success me-1"></i> Simulação: Duelo contra os Homens do Pilar</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 3: Jotaro -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #4a148c;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-joestar mb-1">JOJO-PT3-03</span>
+                                    <h3 class="h6 fw-bold mb-1">Precisão e Velocidade de Stand (Star Platinum)</h3>
+                                    <p class="small text-muted mb-2">Executar rajadas de ataques de curta distância ("ORA ORA ORA") com precisão cirúrgica e manter a calma sob pressão extrema.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-stopwatch text-primary me-1"></i> Laboratório: Parada Temporal (The World)</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 4: Josuke -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #d81b60;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-joestar mb-1">JOJO-PT4-04</span>
+                                    <h3 class="h6 fw-bold mb-1">Restauração Estrutural e Cura (Crazy Diamond)</h3>
+                                    <p class="small text-muted mb-2">Reconstruir objetos danificados e curar aliados em Morioh sem perder a compostura (desde que ninguém critique seu topete).</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-heart-pulse text-danger me-1"></i> Tarefa: Investigação na Cidade de Morioh</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 5: Giorno -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #fbc02d;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-joestar mb-1">JOJO-PT5-05</span>
+                                    <h3 class="h6 fw-bold mb-1">Criação de Vida e Determinação (Gold Experience)</h3>
+                                    <p class="small text-muted mb-2">Converter matéria inanimada em organismos vivos, liderar a Passione e perseguir um sonho justo com determinação inabalável.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-seedling text-success me-1"></i> Estudo de Caso: A Flecha Réquiem</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 6: Jolyne -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #00838f;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-joestar mb-1">JOJO-PT6-06</span>
+                                    <h3 class="h6 fw-bold mb-1">Decomposição em Fios e Resiliência (Stone Free)</h3>
+                                    <p class="small text-muted mb-2">Desfazer o próprio corpo em linhas de alta resistência para espionagem, mobilidade e defesa contra manipulação gravitacional.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-shield-halved text-info me-1"></i> Avaliação Final: Fuga de Green Dolphin Street</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-warning text-dark"><i class="fa-solid fa-clock me-1"></i> Em avaliação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Exemplo (Adicionar Competência) -->
+    <div class="modal fade" id="addCompetencyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Arquivo da Fundação Speedwagon</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <label class="form-label small fw-bold">Selecione uma competência avançada:</label>
+                    <select class="form-select">
+                        <option>JOJO-PT7-01: Rotação Áurea / Spin Infinito (Johnny Joestar)</option>
+                        <option>JOJO-PT8-02: Bolhas de Sabão & Plunder (Soft & Wet)</option>
+                        <option>JOJO-EXT-03: Leitura de Mangá / Heaven's Door (Rohan Kishibe)</option>
+                        <option>JOJO-EXT-04: Domínio de Poses Dramáticas (Pillar Men)</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-jojo" data-bs-dismiss="modal">Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
