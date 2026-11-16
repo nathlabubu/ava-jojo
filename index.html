@@ -102,7 +102,7 @@
     <!-- Barra de Navegação Superior -->
     <nav class="navbar fixed-top bg-white navbar-expand" aria-label="Navegação no site">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand d-flex align-items-center m-0 me-4 p-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center m-0 me-4 p-0">
                 <i class="fa-solid fa-heart me-2" style="color: var(--josuke-pink);"></i>
                 <i class="fa-solid fa-peace me-2" style="color: var(--josuke-gold);"></i> AVA - Colégio Budogaoka (Morioh)
             </a>
@@ -110,18 +110,18 @@
             <div class="primary-navigation">
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Página inicial</a>
+                        <a class="nav-link" href="index.html">Página inicial</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Painel</a>
+                        <a class="nav-link" href="index.html">Painel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold" style="color: var(--josuke-pink);" href="#">Meus cursos</a>
+                        <a class="nav-link active fw-bold" style="color: var(--josuke-pink);" href="index.html">Meus cursos</a>
                     </li>
                 </ul>
             </div>
 
-            <!-- Menu do Usuário com Foto do Josuke Higashikata -->
+            <!-- Menu do Usuário com Link para perfil.html -->
             <div id="usernavigation" class="navbar-nav ms-auto align-items-center gap-3">
                 <div class="position-relative" title="28 alertas da Rádio Morioh Cho">
                     <i class="fa fa-bell text-secondary"></i>
@@ -146,7 +146,7 @@
                             <div class="fw-bold small" style="color: var(--josuke-navy);">Josuke Higashikata</div>
                             <div class="text-muted" style="font-size: 0.75rem;">Turma 1-B • Portador de Crazy Diamond</div>
                         </li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-id-badge me-2 text-primary"></i> Perfil Estudantil</a></li>
+                        <li><a class="dropdown-item fw-semibold" href="perfil.html"><i class="fa-solid fa-id-badge me-2 text-primary"></i> Perfil</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa-solid fa-utensils me-2 text-danger"></i> Guia: Restaurante Trattoria Trussardi</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa-solid fa-radio me-2 text-warning"></i> Morioh Cho Radio (1999)</a></li>
                         <li><hr class="dropdown-divider"></li>
@@ -161,20 +161,23 @@
     <aside class="sidebar-drawer">
         <h6 class="text-uppercase text-muted small fw-bold mb-3">Índice da Disciplina</h6>
         <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="index.html" class="list-group-item list-group-item-action">
                 <i class="fa-solid fa-city me-2 text-warning"></i> Geral: Bem-vindo a Morioh (1999)
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="index.html" class="list-group-item list-group-item-action">
                 <i class="fa-solid fa-gem me-2 text-danger"></i> Módulo 1: Restauração Estrutural
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="index.html" class="list-group-item list-group-item-action">
                 <i class="fa-solid fa-magnifying-glass me-2 text-primary"></i> Módulo 2: Investigação Urbana
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="index.html" class="list-group-item list-group-item-action">
                 <i class="fa-solid fa-dice me-2 text-success"></i> Módulo 3: Jogos de Azar & Estratégia
             </a>
-            <a href="#" class="list-group-item list-group-item-action active" style="background-color: var(--josuke-navy); border-color: var(--josuke-navy);">
+            <a href="index.html" class="list-group-item list-group-item-action active" style="background-color: var(--josuke-navy); border-color: var(--josuke-navy);">
                 <i class="fa-solid fa-award me-2 text-warning"></i> Competências do curso
+            </a>
+            <a href="perfil.html" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-user me-2" style="color: var(--josuke-pink);"></i> Perfil do Monitor
             </a>
         </div>
     </aside>
@@ -187,29 +190,36 @@
                 <div class="card-body">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb small mb-2">
-                            <li class="breadcrumb-item"><a href="#">Meus cursos</a></li>
-                            <li class="breadcrumb-item"><a href="#">MOR-1999: Engenharia de Restauração e Defesa Comunitária</a></li>
+                            <li class="breadcrumb-item"><a href="index.html">Meus cursos</a></li>
+                            <li class="breadcrumb-item"><a href="index.html">MOR-1999: Engenharia de Restauração e Defesa Comunitária</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Competências</li>
                         </ol>
                     </nav>
                     <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
                         <div class="d-flex align-items-center gap-3">
-                            <img src="https://i.pinimg.com/1200x/3f/61/26/3f6126f899e1ba342833f117c5ec1562.jpg" 
-                                 referrerpolicy="no-referrer"
-                                 onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=JosukeHigashikata&backgroundColor=241942';" 
-                                 alt="Josuke Higashikata" 
-                                 class="josuke-profile-card-img shadow-sm">
+                            <a href="perfil.html" title="Ver perfil público de Josuke Higashikata">
+                                <img src="https://i.pinimg.com/1200x/3f/61/26/3f6126f899e1ba342833f117c5ec1562.jpg" 
+                                     referrerpolicy="no-referrer"
+                                     onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=JosukeHigashikata&backgroundColor=241942';" 
+                                     alt="Josuke Higashikata" 
+                                     class="josuke-profile-card-img shadow-sm">
+                            </a>
                             <div>
                                 <div class="d-flex align-items-center gap-2">
                                     <h1 class="h3 mb-1 fw-bold" style="color: var(--josuke-navy);">Competências do curso</h1>
                                     <span class="dora-tag small">DORARARARA!</span>
                                 </div>
-                                <p class="text-muted mb-0">Monitor Responsável: <strong>Josuke Higashikata</strong> • Comitê de Proteção de Morioh (Verão de 1999)</p>
+                                <p class="text-muted mb-0">Monitor Responsável: <a href="perfil.html" class="fw-bold text-decoration-none" style="color: var(--josuke-pink);">Josuke Higashikata</a> • Comitê de Proteção de Morioh (Verão de 1999)</p>
                             </div>
                         </div>
-                        <button class="btn btn-josuke" data-bs-toggle="modal" data-bs-target="#addCompetencyModal">
-                            <i class="fa-solid fa-plus me-1"></i> Adicionar competências ao curso
-                        </button>
+                        <div class="d-flex gap-2">
+                            <a href="perfil.html" class="btn btn-outline-secondary">
+                                <i class="fa-solid fa-user me-1"></i> Perfil
+                            </a>
+                            <button class="btn btn-josuke" data-bs-toggle="modal" data-bs-target="#addCompetencyModal">
+                                <i class="fa-solid fa-plus me-1"></i> Adicionar competências
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -361,18 +371,4 @@
                     <select class="form-select">
                         <option>MOR-EXT-01: Partida de Dados Cee-lo com Mikitaka Hazekura</option>
                         <option>MOR-EXT-02: Coleta de Cupons e Economia Doméstica</option>
-                        <option>MOR-EXT-03: Tiro de Precisão com Esferas de Rolamento</option>
-                        <option>MOR-EXT-04: Exploração do Beco Fantasma (Reimi Sugimoto)</option>
-                    </select>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-josuke" data-bs-dismiss="modal">Adicionar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+                        <option>
