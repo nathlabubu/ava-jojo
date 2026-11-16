@@ -3,29 +3,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competências do curso: Biologia Marinha & Oceanografia | AVA - Instituto Oceanográfico Speedwagon</title>
+    <title>Competências do curso: Restauração & Investigação de Morioh | AVA - Escola Secundária Budogaoka</title>
     <!-- Bootstrap 5 & FontAwesome para reproduzir o tema Boost do Moodle -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         :root {
-            --jotaro-navy: #0a2444;
-            --jotaro-ocean: #0077b6;
-            --jotaro-aqua: #00b4d8;
-            --jotaro-gold: #f4b41a;
-            --jotaro-bg: #f0f7fa;
+            --josuke-navy: #241942;
+            --josuke-pink: #e91e63;
+            --josuke-gold: #fbc02d;
+            --josuke-cyan: #00bcd4;
+            --josuke-bg: #f8f5fc;
         }
         body {
-            background-color: var(--jotaro-bg);
+            background-color: var(--josuke-bg);
             padding-top: 64px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
         .navbar {
-            border-bottom: 3px solid var(--jotaro-gold);
-            box-shadow: 0 2px 10px rgba(10, 36, 68, 0.15);
+            border-bottom: 3px solid var(--josuke-pink);
+            box-shadow: 0 2px 10px rgba(36, 25, 66, 0.15);
         }
         .navbar-brand {
-            color: var(--jotaro-navy) !important;
+            color: var(--josuke-navy) !important;
             font-weight: 800;
             letter-spacing: 0.3px;
         }
@@ -36,7 +36,7 @@
             bottom: 0;
             left: 0;
             background: #fff;
-            border-right: 1px solid #d0e3ec;
+            border-right: 1px solid #e1d8ee;
             padding: 1rem;
             overflow-y: auto;
             z-index: 1000;
@@ -50,49 +50,50 @@
             .main-content { margin-left: 0; }
         }
         .competency-card {
-            border-left: 5px solid var(--jotaro-ocean);
+            border-left: 5px solid var(--josuke-pink);
             transition: transform 0.15s ease;
         }
         .competency-card:hover {
             transform: translateY(-2px);
         }
-        .badge-marine {
-            background-color: #e0f4fc;
-            color: var(--jotaro-navy);
-            border: 1px solid #90e0ef;
+        .badge-morioh {
+            background-color: #fce4ec;
+            color: var(--josuke-pink);
+            border: 1px solid #f48fb1;
             font-family: monospace;
         }
-        .btn-jotaro {
-            background-color: var(--jotaro-navy);
+        .btn-josuke {
+            background-color: var(--josuke-navy);
             color: #fff;
-            border: 1px solid var(--jotaro-gold);
+            border: 2px solid var(--josuke-gold);
         }
-        .btn-jotaro:hover {
-            background-color: var(--jotaro-ocean);
+        .btn-josuke:hover {
+            background-color: var(--josuke-pink);
             color: #fff;
+            border-color: var(--josuke-gold);
         }
-        .jotaro-avatar {
+        .josuke-avatar {
             width: 38px;
             height: 38px;
             object-fit: cover;
             object-position: top center;
             border-radius: 50%;
-            border: 2px solid var(--jotaro-gold);
-            background-color: var(--jotaro-navy);
+            border: 2px solid var(--josuke-gold);
+            background-color: var(--josuke-navy);
         }
-        .jotaro-profile-card-img {
+        .josuke-profile-card-img {
             width: 64px;
             height: 64px;
             object-fit: cover;
             object-position: top center;
             border-radius: 50%;
-            border: 3px solid var(--jotaro-gold);
-            background-color: var(--jotaro-navy);
+            border: 3px solid var(--josuke-pink);
+            background-color: var(--josuke-navy);
         }
-        .menacing-tag {
+        .dora-tag {
             font-weight: 900;
-            color: var(--jotaro-ocean);
-            letter-spacing: 2px;
+            color: var(--josuke-pink);
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -102,8 +103,8 @@
     <nav class="navbar fixed-top bg-white navbar-expand" aria-label="Navegação no site">
         <div class="container-fluid">
             <a href="#" class="navbar-brand d-flex align-items-center m-0 me-4 p-0">
-                <i class="fa-solid fa-dolphin me-2" style="color: var(--jotaro-ocean);"></i>
-                <i class="fa-solid fa-anchor me-2" style="color: var(--jotaro-navy);"></i> AVA - Oceanografia Speedwagon
+                <i class="fa-solid fa-heart me-2" style="color: var(--josuke-pink);"></i>
+                <i class="fa-solid fa-peace me-2" style="color: var(--josuke-gold);"></i> AVA - Colégio Budogaoka (Morioh)
             </a>
 
             <div class="primary-navigation">
@@ -115,40 +116,41 @@
                         <a class="nav-link" href="#">Painel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold" style="color: var(--jotaro-ocean);" href="#">Meus cursos</a>
+                        <a class="nav-link active fw-bold" style="color: var(--josuke-pink);" href="#">Meus cursos</a>
                     </li>
                 </ul>
             </div>
 
-            <!-- Menu do Usuário com Foto do Jotaro Kujo -->
+            <!-- Menu do Usuário com Foto do Josuke Higashikata -->
             <div id="usernavigation" class="navbar-nav ms-auto align-items-center gap-3">
-                <div class="position-relative" title="28 alertas de marés e expedições em Morioh">
+                <div class="position-relative" title="28 alertas da Rádio Morioh Cho">
                     <i class="fa fa-bell text-secondary"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">
                         28
                     </span>
                 </div>
-                <div title="Mensagens do Laboratório Marinho">
+                <div title="Mensagens de Okuyasu & Koichi">
                     <i class="fa fa-message text-secondary"></i>
                 </div>
                 <div class="dropdown">
                     <a href="#" class="btn dropdown-toggle d-flex align-items-center gap-2 py-1" data-bs-toggle="dropdown">
-                        <img src="https://static.wikia.nocookie.net/jjba/images/a/a7/Jotaro_Part_4_Anime.png" 
-                             onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=JotaroKujo&backgroundColor=0a2444';" 
-                             alt="Dr. Jotaro Kujo" 
-                             class="jotaro-avatar">
-                        <span class="d-none d-sm-inline small fw-bold" style="color: var(--jotaro-navy);">Dr. Jotaro Kujo</span>
+                        <img src="https://i.pinimg.com/1200x/3f/61/26/3f6126f899e1ba342833f117c5ec1562.jpg" 
+                             referrerpolicy="no-referrer"
+                             onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=JosukeHigashikata&backgroundColor=241942';" 
+                             alt="Josuke Higashikata" 
+                             class="josuke-avatar">
+                        <span class="d-none d-sm-inline small fw-bold" style="color: var(--josuke-navy);">Josuke Higashikata</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end shadow">
                         <li class="px-3 py-2 border-bottom bg-light">
-                            <div class="fw-bold small" style="color: var(--jotaro-navy);">Prof. Dr. Jotaro Kujo</div>
-                            <div class="text-muted" style="font-size: 0.75rem;">Doutor em Biologia Marinha • Morioh</div>
+                            <div class="fw-bold small" style="color: var(--josuke-navy);">Josuke Higashikata</div>
+                            <div class="text-muted" style="font-size: 0.75rem;">Turma 1-B • Portador de Crazy Diamond</div>
                         </li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user-graduate me-2 text-primary"></i> Perfil Acadêmico</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-lines me-2 text-info"></i> Tese: Estrelas-do-Mar de Morioh</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-compass me-2 text-warning"></i> Expedições Oceanográficas</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-id-badge me-2 text-primary"></i> Perfil Estudantil</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-utensils me-2 text-danger"></i> Guia: Restaurante Trattoria Trussardi</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-radio me-2 text-warning"></i> Morioh Cho Radio (1999)</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-right-from-bracket me-2"></i> Yare Yare Daze (Sair)</a></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-right-from-bracket me-2"></i> Greato Daze (Sair)</a></li>
                     </ul>
                 </div>
             </div>
@@ -160,18 +162,18 @@
         <h6 class="text-uppercase text-muted small fw-bold mb-3">Índice da Disciplina</h6>
         <div class="list-group list-group-flush">
             <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-water me-2 text-info"></i> Geral: Introdução aos Oceanos
+                <i class="fa-solid fa-city me-2 text-warning"></i> Geral: Bem-vindo a Morioh (1999)
             </a>
             <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-star me-2 text-warning"></i> Módulo 1: Equinodermos (Estrelas-do-Mar)
+                <i class="fa-solid fa-gem me-2 text-danger"></i> Módulo 1: Restauração Estrutural
             </a>
             <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-fish-fins me-2 text-primary"></i> Módulo 2: Cetáceos & Golfinhos
+                <i class="fa-solid fa-magnifying-glass me-2 text-primary"></i> Módulo 2: Investigação Urbana
             </a>
             <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-microscope me-2 text-success"></i> Módulo 3: Ecossistemas Costeiros
+                <i class="fa-solid fa-dice me-2 text-success"></i> Módulo 3: Jogos de Azar & Estratégia
             </a>
-            <a href="#" class="list-group-item list-group-item-action active" style="background-color: var(--jotaro-navy); border-color: var(--jotaro-navy);">
+            <a href="#" class="list-group-item list-group-item-action active" style="background-color: var(--josuke-navy); border-color: var(--josuke-navy);">
                 <i class="fa-solid fa-award me-2 text-warning"></i> Competências do curso
             </a>
         </div>
@@ -180,31 +182,32 @@
     <!-- Conteúdo Principal (#maincontent) -->
     <main id="maincontent" class="main-content">
         <div class="container-fluid">
-            <!-- Cabeçalho do Curso com Perfil do Docente Jotaro -->
+            <!-- Cabeçalho do Curso com Perfil do Josuke -->
             <div class="card shadow-sm mb-4 border-0">
                 <div class="card-body">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb small mb-2">
                             <li class="breadcrumb-item"><a href="#">Meus cursos</a></li>
-                            <li class="breadcrumb-item"><a href="#">BIO-MAR-404: Biologia Marinha Avançada e Ecossistemas do Pacífico</a></li>
+                            <li class="breadcrumb-item"><a href="#">MOR-1999: Engenharia de Restauração e Defesa Comunitária</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Competências</li>
                         </ol>
                     </nav>
                     <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
                         <div class="d-flex align-items-center gap-3">
-                            <img src="https://static.wikia.nocookie.net/jjba/images/a/a7/Jotaro_Part_4_Anime.png" 
-                                 onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=JotaroKujo&backgroundColor=0a2444';" 
-                                 alt="Jotaro Kujo Biólogo Marinho" 
-                                 class="jotaro-profile-card-img shadow-sm">
+                            <img src="https://i.pinimg.com/1200x/3f/61/26/3f6126f899e1ba342833f117c5ec1562.jpg" 
+                                 referrerpolicy="no-referrer"
+                                 onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=JosukeHigashikata&backgroundColor=241942';" 
+                                 alt="Josuke Higashikata" 
+                                 class="josuke-profile-card-img shadow-sm">
                             <div>
                                 <div class="d-flex align-items-center gap-2">
-                                    <h1 class="h3 mb-1 fw-bold" style="color: var(--jotaro-navy);">Competências do curso</h1>
-                                    <span class="menacing-tag small">ゴゴゴゴ</span>
+                                    <h1 class="h3 mb-1 fw-bold" style="color: var(--josuke-navy);">Competências do curso</h1>
+                                    <span class="dora-tag small">DORARARARA!</span>
                                 </div>
-                                <p class="text-muted mb-0">Docente Responsável: <strong>Prof. Dr. Jotaro Kujo</strong> • Departamento de Ciências Marinhas (Fundação Speedwagon)</p>
+                                <p class="text-muted mb-0">Monitor Responsável: <strong>Josuke Higashikata</strong> • Comitê de Proteção de Morioh (Verão de 1999)</p>
                             </div>
                         </div>
-                        <button class="btn btn-jotaro" data-bs-toggle="modal" data-bs-target="#addCompetencyModal">
+                        <button class="btn btn-josuke" data-bs-toggle="modal" data-bs-target="#addCompetencyModal">
                             <i class="fa-solid fa-plus me-1"></i> Adicionar competências ao curso
                         </button>
                     </div>
@@ -215,34 +218,34 @@
             <div class="card shadow-sm mb-4 border-0">
                 <div class="card-body">
                     <div class="d-flex justify-content-between mb-1">
-                        <span class="fw-semibold">Progresso na Formação em Biologia Marinha</span>
+                        <span class="fw-semibold">Progresso na Certificação "Coração Dourado de Morioh"</span>
                         <span class="fw-bold text-success">5 de 6 competências concluídas (83%)</span>
                     </div>
                     <div class="progress" style="height: 12px;">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 83%; background-color: var(--jotaro-ocean);"></div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 83%; background-color: var(--josuke-pink);"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Lista de Competências de Biologia Marinha (Temática Jotaro) -->
+            <!-- Lista de Competências (Temática Josuke & Parte 4) -->
             <div class="card shadow-sm border-0">
                 <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
-                    <h2 class="h5 mb-0 fw-bold" style="color: var(--jotaro-navy);">Competências vinculadas a este curso</h2>
-                    <span class="badge text-warning" style="background-color: var(--jotaro-navy);">6 competências</span>
+                    <h2 class="h5 mb-0 fw-bold" style="color: var(--josuke-navy);">Competências vinculadas a este curso</h2>
+                    <span class="badge text-warning" style="background-color: var(--josuke-navy);">6 competências</span>
                 </div>
                 <div class="card-body d-flex flex-column gap-3">
 
-                    <!-- Competência 1: Estrelas-do-mar (Referência direta à tese de doutorado do Jotaro) -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #f4b41a;">
+                    <!-- Competência 1: Restauração -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #e91e63;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-marine mb-1">BIO-EQN-01</span>
-                                    <h3 class="h6 fw-bold mb-1">Taxonomia e Morfologia de Equinodermos (Estrelas-do-Mar de Morioh)</h3>
-                                    <p class="small text-muted mb-2">Identificar, classificar e analisar a regeneração celular de estrelas-do-mar nativas da costa do Pacífico, tema da tese de doutorado do Prof. Jotaro Kujo.</p>
+                                    <span class="badge badge-morioh mb-1">MOR-CRD-01</span>
+                                    <h3 class="h6 fw-bold mb-1">Reconstrução Atômica e Restauração de Objetos (Crazy Diamond)</h3>
+                                    <p class="small text-muted mb-2">Reverter matéria danificada à sua forma original com velocidade de 300 km/h, separando componentes químicos ou remontando estruturas quebradas.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-star text-warning me-1"></i> Coleta de Campo: Praia de Morioh</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-hammer text-danger me-1"></i> Oficina Prática: Reparo de Motocicleta em Alta Velocidade</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -250,17 +253,17 @@
                         </div>
                     </div>
 
-                    <!-- Competência 2: Cetáceos / Golfinhos (Paixão famosa do Jotaro) -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #0077b6;">
+                    <!-- Competência 2: Primeiros Socorros -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #00bcd4;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-marine mb-1">BIO-CET-02</span>
-                                    <h3 class="h6 fw-bold mb-1">Comportamento e Ecolocalização de Cetáceos (Golfinhos & Baleias)</h3>
-                                    <p class="small text-muted mb-2">Monitorar rotas migratórias, padrões acústicos de comunicação e conservação de golfinhos-nariz-de-garrafa em mar aberto.</p>
+                                    <span class="badge badge-morioh mb-1">MOR-MED-02</span>
+                                    <h3 class="h6 fw-bold mb-1">Cura Instantânea e Suporte de Emergência a Aliados</h3>
+                                    <p class="small text-muted mb-2">Estabilizar ferimentos graves de terceiros instantaneamente em campo, reconhecendo os limites éticos e técnicos da autocura.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-wave-square text-primary me-1"></i> Laboratório Acústico: Análise de Sonar</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-kit-medical text-info me-1"></i> Simulação: Resgate na Estação de Morioh</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -268,17 +271,17 @@
                         </div>
                     </div>
 
-                    <!-- Competência 3: Mergulho Científico & Precisão -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #0a2444;">
+                    <!-- Competência 3: Rastreamento -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #241942;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-marine mb-1">BIO-MER-03</span>
-                                    <h3 class="h6 fw-bold mb-1">Mergulho Científico Autônomo e Coleta de Precisão</h3>
-                                    <p class="small text-muted mb-2">Operar equipamentos de mergulho em profundidade com controle respiratório rigoroso e precisão cirúrgica na amostragem sem perturbar o habitat.</p>
+                                    <span class="badge badge-morioh mb-1">MOR-INV-03</span>
+                                    <h3 class="h6 fw-bold mb-1">Rastreamento Forense por Fragmentos (Tática do Sangue Seco)</h3>
+                                    <p class="small text-muted mb-2">Utilizar a propriedade de retorno de fragmentos separados para localizar alvos em fuga ou recuperar itens roubados pela cidade.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-mask-snorkel text-info me-1"></i> Prática Subaquática: Baía de Tóquio</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-route text-primary me-1"></i> Estudo de Caso: Perseguição na Estrada</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -286,17 +289,17 @@
                         </div>
                     </div>
 
-                    <!-- Competência 4: Recifes de Coral -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #009688;">
+                    <!-- Competência 4: Trabalho em Equipe -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #fbc02d;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-marine mb-1">BIO-REC-04</span>
-                                    <h3 class="h6 fw-bold mb-1">Ecologia de Recifes de Coral e Simbiose Marinha</h3>
-                                    <p class="small text-muted mb-2">Avaliar o branqueamento de corais, qualidade da água (pH, salinidade e temperatura) e restauração de bancos recifais.</p>
+                                    <span class="badge badge-morioh mb-1">MOR-EQP-04</span>
+                                    <h3 class="h6 fw-bold mb-1">Sinergia Tática em Dupla (Combo Crazy Diamond & The Hand)</h3>
+                                    <p class="small text-muted mb-2">Coordenar movimentos com Okuyasu Nijimura e Koichi Hirose para neutralizar ameaças sem causar danos colaterais aos moradores.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-vial text-success me-1"></i> Relatório Técnico: Expedição Okinawa</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-handshake text-warning me-1"></i> Projeto em Grupo: Patrulha do Bairro</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -304,17 +307,17 @@
                         </div>
                     </div>
 
-                    <!-- Competência 5: Plâncton e Cadeia Trófica -->
+                    <!-- Competência 5: Culinária Italiana -->
                     <div class="card competency-card shadow-sm" style="border-left-color: #2e7d32;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-marine mb-1">BIO-PLN-05</span>
-                                    <h3 class="h6 fw-bold mb-1">Microbiologia Oceânica e Dinâmica do Fitoplâncton</h3>
-                                    <p class="small text-muted mb-2">Analisar amostras microscópicas de plâncton e compreender seu papel fundamental na produção de oxigênio e na base da teia alimentar marinha.</p>
+                                    <span class="badge badge-morioh mb-1">MOR-NUT-05</span>
+                                    <h3 class="h6 fw-bold mb-1">Avaliação Gastronômica e Terapia Alimentar (Trattoria Trussardi)</h3>
+                                    <p class="small text-muted mb-2">Identificar ingredientes frescos da região e compreender os efeitos restauradores da culinária do Chef Tonio Trussardi.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-microscope text-secondary me-1"></i> Lâminas Histológicas: Florações Marinhas</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-bowl-food text-success me-1"></i> Relatório de Campo: Degustação de Espaguete</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -322,17 +325,17 @@
                         </div>
                     </div>
 
-                    <!-- Competência 6: Zona Abissal -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #3f51b5;">
+                    <!-- Competência 6: Controle Emocional / Topete -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #8e24aa;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-marine mb-1">BIO-ABI-06</span>
-                                    <h3 class="h6 fw-bold mb-1">Fauna Abissal e Bioluminescência de Águas Profundas</h3>
-                                    <p class="small text-muted mb-2">Estudar adaptações fisiológicas de organismos extremófilos em fossas oceânicas sob alta pressão hidrostática e ausência de luz solar.</p>
+                                    <span class="badge badge-morioh mb-1">MOR-EMO-06</span>
+                                    <h3 class="h6 fw-bold mb-1">Manutenção Capilar e Controle de Fúria (Protocolo do Topete)</h3>
+                                    <p class="small text-muted mb-2">Manter a cordialidade e o bom humor característicos no dia a dia, aplicando disciplina rigorosa apenas quando insultam seu penteado.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-submarine text-primary me-1"></i> TCC: Exploração na Fossa das Marianas (Submarino Speedwagon)</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-comb text-purple me-1"></i> Avaliação Contínua: Teste de Paciência com Rohan Kishibe</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-warning text-dark"><i class="fa-solid fa-clock me-1"></i> Em avaliação</span>
@@ -350,21 +353,21 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Catálogo de Oceanografia Speedwagon</h5>
+                    <h5 class="modal-title">Mural de Atividades de Morioh</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
-                    <label class="form-label small fw-bold">Selecione uma competência de Biologia Marinha:</label>
+                    <label class="form-label small fw-bold">Selecione uma habilidade extra:</label>
                     <select class="form-select">
-                        <option>BIO-EXT-01: Conservação de Tartarugas Marinhas do Pacífico</option>
-                        <option>BIO-EXT-02: Oceanografia Física e Correntes Marítimas</option>
-                        <option>BIO-EXT-03: Identificação de Moluscos e Cefalópodes</option>
-                        <option>BIO-EXT-04: Impacto Ambiental e Despoluição Costeira</option>
+                        <option>MOR-EXT-01: Partida de Dados Cee-lo com Mikitaka Hazekura</option>
+                        <option>MOR-EXT-02: Coleta de Cupons e Economia Doméstica</option>
+                        <option>MOR-EXT-03: Tiro de Precisão com Esferas de Rolamento</option>
+                        <option>MOR-EXT-04: Exploração do Beco Fantasma (Reimi Sugimoto)</option>
                     </select>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-jotaro" data-bs-dismiss="modal">Adicionar</button>
+                    <button type="button" class="btn btn-josuke" data-bs-dismiss="modal">Adicionar</button>
                 </div>
             </div>
         </div>
