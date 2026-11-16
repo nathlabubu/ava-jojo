@@ -3,39 +3,40 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competências do curso: Domínio de Hamon e Stands | AVA - Fundação Speedwagon</title>
+    <title>Competências do curso: Biologia Marinha & Oceanografia | AVA - Instituto Oceanográfico Speedwagon</title>
     <!-- Bootstrap 5 & FontAwesome para reproduzir o tema Boost do Moodle -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         :root {
-            --jojo-purple: #4a148c;
-            --jojo-gold: #fbc02d;
-            --jojo-magenta: #ad1457;
-            --jojo-bg: #f6f3fa;
+            --jotaro-navy: #0a2444;
+            --jotaro-ocean: #0077b6;
+            --jotaro-aqua: #00b4d8;
+            --jotaro-gold: #f4b41a;
+            --jotaro-bg: #f0f7fa;
         }
         body {
-            background-color: var(--jojo-bg);
-            padding-top: 60px;
+            background-color: var(--jotaro-bg);
+            padding-top: 64px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
         .navbar {
-            border-bottom: 3px solid var(--jojo-gold);
-            box-shadow: 0 2px 8px rgba(74, 20, 140, 0.15);
+            border-bottom: 3px solid var(--jotaro-gold);
+            box-shadow: 0 2px 10px rgba(10, 36, 68, 0.15);
         }
         .navbar-brand {
-            color: var(--jojo-purple) !important;
+            color: var(--jotaro-navy) !important;
             font-weight: 800;
             letter-spacing: 0.3px;
         }
         .sidebar-drawer {
             width: 260px;
             position: fixed;
-            top: 59px;
+            top: 63px;
             bottom: 0;
             left: 0;
             background: #fff;
-            border-right: 1px solid #dee2e6;
+            border-right: 1px solid #d0e3ec;
             padding: 1rem;
             overflow-y: auto;
             z-index: 1000;
@@ -49,30 +50,48 @@
             .main-content { margin-left: 0; }
         }
         .competency-card {
-            border-left: 5px solid var(--jojo-purple);
+            border-left: 5px solid var(--jotaro-ocean);
             transition: transform 0.15s ease;
         }
         .competency-card:hover {
             transform: translateY(-2px);
         }
-        .badge-joestar {
-            background-color: #f3e5f5;
-            color: var(--jojo-purple);
-            border: 1px solid #ce93d8;
+        .badge-marine {
+            background-color: #e0f4fc;
+            color: var(--jotaro-navy);
+            border: 1px solid #90e0ef;
             font-family: monospace;
         }
-        .btn-jojo {
-            background-color: var(--jojo-purple);
+        .btn-jotaro {
+            background-color: var(--jotaro-navy);
             color: #fff;
-            border: 1px solid var(--jojo-gold);
+            border: 1px solid var(--jotaro-gold);
         }
-        .btn-jojo:hover {
-            background-color: #310d5e;
-            color: var(--jojo-gold);
+        .btn-jotaro:hover {
+            background-color: var(--jotaro-ocean);
+            color: #fff;
+        }
+        .jotaro-avatar {
+            width: 38px;
+            height: 38px;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 50%;
+            border: 2px solid var(--jotaro-gold);
+            background-color: var(--jotaro-navy);
+        }
+        .jotaro-profile-card-img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 50%;
+            border: 3px solid var(--jotaro-gold);
+            background-color: var(--jotaro-navy);
         }
         .menacing-tag {
             font-weight: 900;
-            color: var(--jojo-magenta);
+            color: var(--jotaro-ocean);
             letter-spacing: 2px;
         }
     </style>
@@ -83,7 +102,8 @@
     <nav class="navbar fixed-top bg-white navbar-expand" aria-label="Navegação no site">
         <div class="container-fluid">
             <a href="#" class="navbar-brand d-flex align-items-center m-0 me-4 p-0">
-                <i class="fa-solid fa-star me-2" style="color: var(--jojo-magenta);"></i> AVA - Fundação Speedwagon
+                <i class="fa-solid fa-dolphin me-2" style="color: var(--jotaro-ocean);"></i>
+                <i class="fa-solid fa-anchor me-2" style="color: var(--jotaro-navy);"></i> AVA - Oceanografia Speedwagon
             </a>
 
             <div class="primary-navigation">
@@ -95,35 +115,40 @@
                         <a class="nav-link" href="#">Painel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold" style="color: var(--jojo-purple);" href="#">Meus cursos</a>
+                        <a class="nav-link active fw-bold" style="color: var(--jotaro-ocean);" href="#">Meus cursos</a>
                     </li>
                 </ul>
             </div>
 
-            <!-- Menu do Usuário / Notificações -->
+            <!-- Menu do Usuário com Foto do Jotaro Kujo -->
             <div id="usernavigation" class="navbar-nav ms-auto align-items-center gap-3">
-                <div class="position-relative" title="28 alertas de usuários de Stand inimigos">
+                <div class="position-relative" title="28 alertas de marés e expedições em Morioh">
                     <i class="fa fa-bell text-secondary"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">
                         28
                     </span>
                 </div>
-                <div title="Comunicador da Fundação Speedwagon">
+                <div title="Mensagens do Laboratório Marinho">
                     <i class="fa fa-message text-secondary"></i>
                 </div>
                 <div class="dropdown">
-                    <a href="#" class="btn dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown">
-                        <span class="rounded-circle text-warning d-inline-flex justify-content-center align-items-center fw-bold" style="width: 35px; height: 35px; background-color: #212529; border: 2px solid var(--jojo-gold);">
-                            JK
-                        </span>
-                        <span class="d-none d-sm-inline small fw-semibold">Jotaro Kujo</span>
+                    <a href="#" class="btn dropdown-toggle d-flex align-items-center gap-2 py-1" data-bs-toggle="dropdown">
+                        <img src="https://static.wikia.nocookie.net/jjba/images/a/a7/Jotaro_Part_4_Anime.png" 
+                             onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=JotaroKujo&backgroundColor=0a2444';" 
+                             alt="Dr. Jotaro Kujo" 
+                             class="jotaro-avatar">
+                        <span class="d-none d-sm-inline small fw-bold" style="color: var(--jotaro-navy);">Dr. Jotaro Kujo</span>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Perfil (Biólogo Marinho / Portador)</a></li>
-                        <li><a class="dropdown-item" href="#">Registro de Batalhas</a></li>
-                        <li><a class="dropdown-item" href="#">Rota para o Egito (50 Dias)</a></li>
+                    <ul class="dropdown-menu dropdown-menu-end shadow">
+                        <li class="px-3 py-2 border-bottom bg-light">
+                            <div class="fw-bold small" style="color: var(--jotaro-navy);">Prof. Dr. Jotaro Kujo</div>
+                            <div class="text-muted" style="font-size: 0.75rem;">Doutor em Biologia Marinha • Morioh</div>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user-graduate me-2 text-primary"></i> Perfil Acadêmico</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-file-lines me-2 text-info"></i> Tese: Estrelas-do-Mar de Morioh</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-compass me-2 text-warning"></i> Expedições Oceanográficas</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item text-danger" href="#">Yare Yare Daze (Sair)</a></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-right-from-bracket me-2"></i> Yare Yare Daze (Sair)</a></li>
                     </ul>
                 </div>
             </div>
@@ -132,21 +157,21 @@
 
     <!-- Gaveta Lateral (Drawer) -->
     <aside class="sidebar-drawer">
-        <h6 class="text-uppercase text-muted small fw-bold mb-3">Índice do Curso</h6>
+        <h6 class="text-uppercase text-muted small fw-bold mb-3">Índice da Disciplina</h6>
         <div class="list-group list-group-flush">
             <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-mask me-2 text-secondary"></i> Geral: A Máscara de Pedra
+                <i class="fa-solid fa-water me-2 text-info"></i> Geral: Introdução aos Oceanos
             </a>
             <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-sun me-2 text-warning"></i> Módulo 1: Respiração Hamon
+                <i class="fa-solid fa-star me-2 text-warning"></i> Módulo 1: Equinodermos (Estrelas-do-Mar)
             </a>
             <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-ghost me-2 text-primary"></i> Módulo 2: Manifestação de Stand
+                <i class="fa-solid fa-fish-fins me-2 text-primary"></i> Módulo 2: Cetáceos & Golfinhos
             </a>
             <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa-solid fa-hurricane me-2 text-info"></i> Módulo 3: Técnica Spin & Flecha
+                <i class="fa-solid fa-microscope me-2 text-success"></i> Módulo 3: Ecossistemas Costeiros
             </a>
-            <a href="#" class="list-group-item list-group-item-action active" style="background-color: var(--jojo-purple); border-color: var(--jojo-purple);">
+            <a href="#" class="list-group-item list-group-item-action active" style="background-color: var(--jotaro-navy); border-color: var(--jotaro-navy);">
                 <i class="fa-solid fa-award me-2 text-warning"></i> Competências do curso
             </a>
         </div>
@@ -155,25 +180,31 @@
     <!-- Conteúdo Principal (#maincontent) -->
     <main id="maincontent" class="main-content">
         <div class="container-fluid">
-            <!-- Cabeçalho do Curso -->
+            <!-- Cabeçalho do Curso com Perfil do Docente Jotaro -->
             <div class="card shadow-sm mb-4 border-0">
                 <div class="card-body">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb small mb-2">
                             <li class="breadcrumb-item"><a href="#">Meus cursos</a></li>
-                            <li class="breadcrumb-item"><a href="#">JOJO-303: Combate Bizarro e Energia Espiritual</a></li>
+                            <li class="breadcrumb-item"><a href="#">BIO-MAR-404: Biologia Marinha Avançada e Ecossistemas do Pacífico</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Competências</li>
                         </ol>
                     </nav>
-                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
-                        <div>
-                            <div class="d-flex align-items-center gap-2">
-                                <h1 class="h3 mb-1 fw-bold" style="color: var(--jojo-purple);">Competências do curso</h1>
-                                <span class="menacing-tag small">ゴゴゴゴ</span>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://static.wikia.nocookie.net/jjba/images/a/a7/Jotaro_Part_4_Anime.png" 
+                                 onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=JotaroKujo&backgroundColor=0a2444';" 
+                                 alt="Jotaro Kujo Biólogo Marinho" 
+                                 class="jotaro-profile-card-img shadow-sm">
+                            <div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <h1 class="h3 mb-1 fw-bold" style="color: var(--jotaro-navy);">Competências do curso</h1>
+                                    <span class="menacing-tag small">ゴゴゴゴ</span>
+                                </div>
+                                <p class="text-muted mb-0">Docente Responsável: <strong>Prof. Dr. Jotaro Kujo</strong> • Departamento de Ciências Marinhas (Fundação Speedwagon)</p>
                             </div>
-                            <p class="text-muted mb-0">Estrutura de aprendizagem: <strong>Arquivo Confidencial da Fundação Speedwagon</strong></p>
                         </div>
-                        <button class="btn btn-jojo" data-bs-toggle="modal" data-bs-target="#addCompetencyModal">
+                        <button class="btn btn-jotaro" data-bs-toggle="modal" data-bs-target="#addCompetencyModal">
                             <i class="fa-solid fa-plus me-1"></i> Adicionar competências ao curso
                         </button>
                     </div>
@@ -184,34 +215,34 @@
             <div class="card shadow-sm mb-4 border-0">
                 <div class="card-body">
                     <div class="d-flex justify-content-between mb-1">
-                        <span class="fw-semibold">Progresso na Linhagem Joestar</span>
+                        <span class="fw-semibold">Progresso na Formação em Biologia Marinha</span>
                         <span class="fw-bold text-success">5 de 6 competências concluídas (83%)</span>
                     </div>
                     <div class="progress" style="height: 12px;">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 83%; background-color: var(--jojo-purple);"></div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 83%; background-color: var(--jotaro-ocean);"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Lista de Competências (Partes 1 a 6) -->
+            <!-- Lista de Competências de Biologia Marinha (Temática Jotaro) -->
             <div class="card shadow-sm border-0">
                 <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
-                    <h2 class="h5 mb-0 fw-bold">Competências vinculadas a este curso</h2>
-                    <span class="badge bg-dark text-warning">6 competências</span>
+                    <h2 class="h5 mb-0 fw-bold" style="color: var(--jotaro-navy);">Competências vinculadas a este curso</h2>
+                    <span class="badge text-warning" style="background-color: var(--jotaro-navy);">6 competências</span>
                 </div>
                 <div class="card-body d-flex flex-column gap-3">
 
-                    <!-- Competência 1: Jonathan -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #1976d2;">
+                    <!-- Competência 1: Estrelas-do-mar (Referência direta à tese de doutorado do Jotaro) -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #f4b41a;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-joestar mb-1">JOJO-PT1-01</span>
-                                    <h3 class="h6 fw-bold mb-1">Controle de Respiração Hamon (Jonathan Joestar)</h3>
-                                    <p class="small text-muted mb-2">Canalizar energia solar através do fluxo sanguíneo para neutralizar vampiros e criaturas da noite com honra de cavalheiro.</p>
+                                    <span class="badge badge-marine mb-1">BIO-EQN-01</span>
+                                    <h3 class="h6 fw-bold mb-1">Taxonomia e Morfologia de Equinodermos (Estrelas-do-Mar de Morioh)</h3>
+                                    <p class="small text-muted mb-2">Identificar, classificar e analisar a regeneração celular de estrelas-do-mar nativas da costa do Pacífico, tema da tese de doutorado do Prof. Jotaro Kujo.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-fire text-warning me-1"></i> Prática: Overdrive Solar</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-star text-warning me-1"></i> Coleta de Campo: Praia de Morioh</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -219,17 +250,71 @@
                         </div>
                     </div>
 
-                    <!-- Competência 2: Joseph -->
+                    <!-- Competência 2: Cetáceos / Golfinhos (Paixão famosa do Jotaro) -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #0077b6;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-marine mb-1">BIO-CET-02</span>
+                                    <h3 class="h6 fw-bold mb-1">Comportamento e Ecolocalização de Cetáceos (Golfinhos & Baleias)</h3>
+                                    <p class="small text-muted mb-2">Monitorar rotas migratórias, padrões acústicos de comunicação e conservação de golfinhos-nariz-de-garrafa em mar aberto.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-wave-square text-primary me-1"></i> Laboratório Acústico: Análise de Sonar</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 3: Mergulho Científico & Precisão -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #0a2444;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-marine mb-1">BIO-MER-03</span>
+                                    <h3 class="h6 fw-bold mb-1">Mergulho Científico Autônomo e Coleta de Precisão</h3>
+                                    <p class="small text-muted mb-2">Operar equipamentos de mergulho em profundidade com controle respiratório rigoroso e precisão cirúrgica na amostragem sem perturbar o habitat.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-mask-snorkel text-info me-1"></i> Prática Subaquática: Baía de Tóquio</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 4: Recifes de Coral -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #009688;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge badge-marine mb-1">BIO-REC-04</span>
+                                    <h3 class="h6 fw-bold mb-1">Ecologia de Recifes de Coral e Simbiose Marinha</h3>
+                                    <p class="small text-muted mb-2">Avaliar o branqueamento de corais, qualidade da água (pH, salinidade e temperatura) e restauração de bancos recifais.</p>
+                                    <div class="small">
+                                        <strong>Atividades vinculadas:</strong>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-vial text-success me-1"></i> Relatório Técnico: Expedição Okinawa</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competência 5: Plâncton e Cadeia Trófica -->
                     <div class="card competency-card shadow-sm" style="border-left-color: #2e7d32;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-joestar mb-1">JOJO-PT2-02</span>
-                                    <h3 class="h6 fw-bold mb-1">Estratégia Imprevisível & Previsão (Joseph Joestar)</h3>
-                                    <p class="small text-muted mb-2">Antecipar a próxima frase do oponente, improvisar armadilhas com Clackers e dominar a técnica secreta da família Joestar (Nigerundayo).</p>
+                                    <span class="badge badge-marine mb-1">BIO-PLN-05</span>
+                                    <h3 class="h6 fw-bold mb-1">Microbiologia Oceânica e Dinâmica do Fitoplâncton</h3>
+                                    <p class="small text-muted mb-2">Analisar amostras microscópicas de plâncton e compreender seu papel fundamental na produção de oxigênio e na base da teia alimentar marinha.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-chess text-success me-1"></i> Simulação: Duelo contra os Homens do Pilar</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-microscope text-secondary me-1"></i> Lâminas Histológicas: Florações Marinhas</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
@@ -237,71 +322,17 @@
                         </div>
                     </div>
 
-                    <!-- Competência 3: Jotaro -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #4a148c;">
+                    <!-- Competência 6: Zona Abissal -->
+                    <div class="card competency-card shadow-sm" style="border-left-color: #3f51b5;">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
-                                    <span class="badge badge-joestar mb-1">JOJO-PT3-03</span>
-                                    <h3 class="h6 fw-bold mb-1">Precisão e Velocidade de Stand (Star Platinum)</h3>
-                                    <p class="small text-muted mb-2">Executar rajadas de ataques de curta distância ("ORA ORA ORA") com precisão cirúrgica e manter a calma sob pressão extrema.</p>
+                                    <span class="badge badge-marine mb-1">BIO-ABI-06</span>
+                                    <h3 class="h6 fw-bold mb-1">Fauna Abissal e Bioluminescência de Águas Profundas</h3>
+                                    <p class="small text-muted mb-2">Estudar adaptações fisiológicas de organismos extremófilos em fossas oceânicas sob alta pressão hidrostática e ausência de luz solar.</p>
                                     <div class="small">
                                         <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-stopwatch text-primary me-1"></i> Laboratório: Parada Temporal (The World)</span>
-                                    </div>
-                                </div>
-                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Competência 4: Josuke -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #d81b60;">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start">
-                                <div>
-                                    <span class="badge badge-joestar mb-1">JOJO-PT4-04</span>
-                                    <h3 class="h6 fw-bold mb-1">Restauração Estrutural e Cura (Crazy Diamond)</h3>
-                                    <p class="small text-muted mb-2">Reconstruir objetos danificados e curar aliados em Morioh sem perder a compostura (desde que ninguém critique seu topete).</p>
-                                    <div class="small">
-                                        <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-heart-pulse text-danger me-1"></i> Tarefa: Investigação na Cidade de Morioh</span>
-                                    </div>
-                                </div>
-                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Competência 5: Giorno -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #fbc02d;">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start">
-                                <div>
-                                    <span class="badge badge-joestar mb-1">JOJO-PT5-05</span>
-                                    <h3 class="h6 fw-bold mb-1">Criação de Vida e Determinação (Gold Experience)</h3>
-                                    <p class="small text-muted mb-2">Converter matéria inanimada em organismos vivos, liderar a Passione e perseguir um sonho justo com determinação inabalável.</p>
-                                    <div class="small">
-                                        <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-seedling text-success me-1"></i> Estudo de Caso: A Flecha Réquiem</span>
-                                    </div>
-                                </div>
-                                <span class="badge bg-success"><i class="fa-solid fa-check me-1"></i> Proficiente</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Competência 6: Jolyne -->
-                    <div class="card competency-card shadow-sm" style="border-left-color: #00838f;">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start">
-                                <div>
-                                    <span class="badge badge-joestar mb-1">JOJO-PT6-06</span>
-                                    <h3 class="h6 fw-bold mb-1">Decomposição em Fios e Resiliência (Stone Free)</h3>
-                                    <p class="small text-muted mb-2">Desfazer o próprio corpo em linhas de alta resistência para espionagem, mobilidade e defesa contra manipulação gravitacional.</p>
-                                    <div class="small">
-                                        <strong>Atividades vinculadas:</strong>
-                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-shield-halved text-info me-1"></i> Avaliação Final: Fuga de Green Dolphin Street</span>
+                                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-submarine text-primary me-1"></i> TCC: Exploração na Fossa das Marianas (Submarino Speedwagon)</span>
                                     </div>
                                 </div>
                                 <span class="badge bg-warning text-dark"><i class="fa-solid fa-clock me-1"></i> Em avaliação</span>
@@ -319,21 +350,21 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Arquivo da Fundação Speedwagon</h5>
+                    <h5 class="modal-title">Catálogo de Oceanografia Speedwagon</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
-                    <label class="form-label small fw-bold">Selecione uma competência avançada:</label>
+                    <label class="form-label small fw-bold">Selecione uma competência de Biologia Marinha:</label>
                     <select class="form-select">
-                        <option>JOJO-PT7-01: Rotação Áurea / Spin Infinito (Johnny Joestar)</option>
-                        <option>JOJO-PT8-02: Bolhas de Sabão & Plunder (Soft & Wet)</option>
-                        <option>JOJO-EXT-03: Leitura de Mangá / Heaven's Door (Rohan Kishibe)</option>
-                        <option>JOJO-EXT-04: Domínio de Poses Dramáticas (Pillar Men)</option>
+                        <option>BIO-EXT-01: Conservação de Tartarugas Marinhas do Pacífico</option>
+                        <option>BIO-EXT-02: Oceanografia Física e Correntes Marítimas</option>
+                        <option>BIO-EXT-03: Identificação de Moluscos e Cefalópodes</option>
+                        <option>BIO-EXT-04: Impacto Ambiental e Despoluição Costeira</option>
                     </select>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-jojo" data-bs-dismiss="modal">Adicionar</button>
+                    <button type="button" class="btn btn-jotaro" data-bs-dismiss="modal">Adicionar</button>
                 </div>
             </div>
         </div>
